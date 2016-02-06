@@ -23,16 +23,16 @@ const App = React.createClass({
 
     // Override LeftNavigation
     let Menus = [
-      { text: 'Main Menu 1', icon: 'settings_input_composite'},
-      { text: 'Main Menu 2', icon: 'mic_off'},
-      { text: 'Main Menu 3', icon: 'queue_play_next'},
-      { text: 'Main Menu 4', icon: 'play_circle_filled'},
-      { text: 'Main Menu 5', icon: 'video_library'}
+      { text: 'Composite Settings', icon: 'settings_input_composite'},
+      { text: 'Audio/Mic Off', icon: 'mic_off'},
+      { text: 'Queue Play Next', icon: 'queue_play_next'},
+      { text: 'Play Circle Filled', icon: 'play_circle_filled'},
+      { text: 'Video Library', icon: 'video_library'}
     ];
 
     let ListStyles = {
       backgroundColor: '#7AAAC5',
-      width: 200
+      width: 235
     }
 
     this.setState({overrideThirdPartyStyle: overrideThirdPartyStyle});
@@ -62,7 +62,7 @@ const App = React.createClass({
       width: 200
     }
 
-    // Buttons
+    // Button
     let buttonStyle = {
       padding: 10
     }
@@ -74,7 +74,7 @@ const App = React.createClass({
 
     return (
       <div>
-        <h2>Overriding 3rd Party Components using ReactJS</h2>
+        <h2>Overriding 3rd Party Components using   ReactJS</h2>
         <div>
           <button style={buttonStyle} onClick={this.onChange}>Send down properties to third party components</button>
           <button style={buttonStyle2} onClick={this.resetStyles}>Undo</button>
@@ -83,9 +83,10 @@ const App = React.createClass({
           <ThirdPartySection2 style={this.state.overrideThirdPartyStyle}/><br/>
           <ThirdPartySection3 style={this.state.overrideThirdPartyStyle}/>
         </div>
+        <br/>
         <hr/>
         <div>
-          <h3>Let's override left navigation styles</h3>
+          <h3>{(this.state.Menus) ? 'Modified Left Navigation' : 'Default Left Navigation'}</h3>
           <LeftNavigation Menus={this.state.Menus} ListStyles={this.state.ListStyles}/>
         </div>
       </div>
