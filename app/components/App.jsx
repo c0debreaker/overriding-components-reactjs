@@ -74,7 +74,7 @@ const App = React.createClass({
 
     return (
       <div>
-        <h2>Overriding 3rd Party Component ReactJS</h2>
+        <h2>Overriding 3rd Party Components using ReactJS</h2>
         <div>
           <button style={buttonStyle} onClick={this.onChange}>Send down properties to third party components</button>
           <button style={buttonStyle2} onClick={this.resetStyles}>Undo</button>
