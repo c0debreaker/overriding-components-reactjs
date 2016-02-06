@@ -1,11 +1,15 @@
 {
   "name": "override-reactjs-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Overriding components using ReactJS",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "NODE_ENV=production webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:c0debreaker/overriding-components-reactjs.git"
   },
   "author": "Neil Camara",
   "license": "ISC",
