@@ -1,8 +1,8 @@
 Sample program that shows how a sub component's properties can be modified by a parent module
 
 ### This example small progam uses two external ReactJS components that can be manually overriden
-- [Navigation Component](git@github.com:c0debreaker/left-navigation-reactjs.git)
-- [Box Component] (git@github.com:c0debreaker/box-module-reactjs.git)
+- [Navigation Component](https://github.com/c0debreaker/left-navigation-reactjs)
+- [Box Component] (https://github.com/c0debreaker/box-module-reactjs)
 
 ### Installation
 ```
