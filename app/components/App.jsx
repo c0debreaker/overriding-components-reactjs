@@ -1,7 +1,8 @@
 import React from 'react';
-// import ThirdPartySection from './thirdparty.jsx';
-import LeftNavigation from 'third-party-component-1/app/leftnavigation.jsx';
-import ThirdPartySection from 'third-party-component-1/app/index.jsx';
+
+// From module third-party-component-1
+import LeftNavigation from 'left-navigation/app/leftnavigation.jsx';
+import BoxSection from 'box-module/app/box.jsx';
 import ThirdPartySection2 from './thirdparty2.jsx';
 import ThirdPartySection3 from './thirdparty3.jsx';
 
@@ -74,12 +75,12 @@ const App = React.createClass({
 
     return (
       <div>
-        <h2>Overriding 3rd Party Components using   ReactJS</h2>
+        <h2>Overriding 3rd Party Components using ReactJS</h2>
         <div>
           <button style={buttonStyle} onClick={this.onChange}>Send down properties to third party components</button>
           <button style={buttonStyle2} onClick={this.resetStyles}>Undo</button>
 
-          <ThirdPartySection style={this.state.overrideThirdPartyStyle} PrimaryText={this.state.PrimaryText}/><br/>
+          <BoxSection style={this.state.overrideThirdPartyStyle} PrimaryText={this.state.PrimaryText}/><br/>
           <ThirdPartySection2 style={this.state.overrideThirdPartyStyle}/><br/>
           <ThirdPartySection3 style={this.state.overrideThirdPartyStyle}/>
         </div>

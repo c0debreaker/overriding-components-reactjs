@@ -1,5 +1,5 @@
 {
-  "name": "kanban",
+  "name": "override-reactjs-components",
   "version": "1.0.0",
   "description": "Overriding components using ReactJS",
   "main": "index.js",
@@ -34,6 +34,7 @@
   "dependencies": {
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "third-party-component-1": "git+ssh://git@github.com/c0debreaker/react-component-1.git"
+    "box-module": "git+ssh://git@github.com/c0debreaker/box-module-reactjs.git",
+    "left-navigation": "git+ssh://git@github.com/c0debreaker/left-navigation-reactjs.git"
   }
 }
