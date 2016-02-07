@@ -11,9 +11,9 @@ const App = React.createClass({
       overrideThirdPartyStyle: {},
       ListItemProperties: {
         Menus: undefined,
-        ListStyles: undefined,
-        PrimaryText: undefined
-      }
+        ListStyles: undefined
+      },
+      PrimaryText: undefined
     }
   },
 
@@ -53,6 +53,7 @@ const App = React.createClass({
     }
 
     this.setState({overrideThirdPartyStyle: overrideThirdPartyStyle});
+    this.setState({PrimaryText: 'Overriden Section Name'});
     this.setState({ListItemProperties: ListItemProperties});
   },
 
@@ -61,10 +62,10 @@ const App = React.createClass({
     this.setState({
       ListItemProperties: {
         Menus: undefined,
-        ListStyles: undefined,
-        PrimaryText: undefined
+        ListStyles: undefined
       }
     });
+    this.setState({PrimaryText: undefined});
   },
 
   render() {
