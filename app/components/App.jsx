@@ -1,6 +1,5 @@
 import React from 'react';
 
-// From module third-party-component-1
 import LeftNavigation from 'left-navigation/app/leftnavigation.jsx';
 import BoxSection from 'box-module/app/box.jsx';
 import ThirdPartySection2 from './thirdparty2.jsx';
@@ -10,9 +9,11 @@ const App = React.createClass({
   getInitialState() {
     return {
       overrideThirdPartyStyle: {},
-      Menus: undefined,
-      ListStyles: undefined,
-      PrimaryText: undefined
+      ListItemProperties: {
+        Menus: undefined,
+        ListStyles: undefined,
+        PrimaryText: undefined
+      }
     }
   },
 
@@ -28,7 +29,10 @@ const App = React.createClass({
       { text: 'Audio/Mic Off', icon: 'mic_off'},
       { text: 'Queue Play Next', icon: 'queue_play_next'},
       { text: 'Play Circle Filled', icon: 'play_circle_filled'},
-      { text: 'Video Library', icon: 'video_library'}
+      { text: 'Video Library', icon: 'video_library'},
+      { text: 'Subtitles', icon: 'subtitles'},
+      { text: 'Slow Motion Video', icon: 'slow_motion_video'},
+      { text: 'Surround Sound', icon: 'surround_sound'}
     ];
 
     let ListStyles = {
@@ -36,34 +40,36 @@ const App = React.createClass({
       width: 235
     }
 
-    this.setState({overrideThirdPartyStyle: overrideThirdPartyStyle});
-    this.setState({Menus: Menus});
-    this.setState({ListStyles: ListStyles});
-    this.setState({PrimaryText: 'Overriden 3rd party submodule'});
-  },
-  resetStyles() {
-    this.setState({overrideThirdPartyStyle: {}});
-    this.setState({Menus: undefined});
-    this.setState({ListStyles: undefined});
-    this.setState({PrimaryText: undefined});
-  },
-  render() {
-
-    // Override LeftNavigation
-    let Menus = [
-      { text: 'Main Menu 1', icon: 'settings_input_composite'},
-      { text: 'Main Menu 2', icon: 'mic_off'},
-      { text: 'Main Menu 3', icon: 'queue_play_next'},
-      { text: 'Main Menu 4', icon: 'play_circle_filled'},
-      { text: 'Main Menu 5', icon: 'video_library'}
-    ];
-
-    let ListStyles = {
-      backgroundColor: '#7AAAC5',
-      width: 200
+    let innerDivStyle = {
+      paddingLeft: 20,
+      paddingTop: 10,
+      paddingBottom: 7
     }
 
-    // Button
+    let ListItemProperties = {
+      Menus,
+      ListStyles,
+      innerDivStyle 
+    }
+
+    this.setState({overrideThirdPartyStyle: overrideThirdPartyStyle});
+    this.setState({ListItemProperties: ListItemProperties});
+  },
+
+  resetStyles() {
+    this.setState({overrideThirdPartyStyle: {}});
+    this.setState({
+      ListItemProperties: {
+        Menus: undefined,
+        ListStyles: undefined,
+        PrimaryText: undefined
+      }
+    });
+  },
+
+  render() {
+
+    // Button styling
     let buttonStyle = {
       padding: 10
     }
@@ -88,10 +94,14 @@ const App = React.createClass({
         <hr/>
         <div>
           <h3>{(this.state.Menus) ? 'Modified Left Navigation' : 'Default Left Navigation'}</h3>
-          <LeftNavigation Menus={this.state.Menus} ListStyles={this.state.ListStyles}/>
+          <LeftNavigation
+            Menus={this.state.ListItemProperties.Menus}
+            ListStyles={this.state.ListItemProperties.ListStyles}
+            innerDivStyle={this.state.ListItemProperties.innerDivStyle}
+          />
         </div>
       </div>
-      )
+    )
   }
 })
 

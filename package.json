@@ -1,6 +1,6 @@
 {
   "name": "override-reactjs-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Overriding components using ReactJS",
   "main": "index.js",
   "scripts": {
