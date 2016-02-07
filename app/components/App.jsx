@@ -93,7 +93,7 @@ const App = React.createClass({
         <br/>
         <hr/>
         <div>
-          <h3>{(this.state.Menus) ? 'Modified Left Navigation' : 'Default Left Navigation'}</h3>
+          <h3>{(this.state.ListItemProperties.Menus) ? 'Modified Left Navigation' : 'Default Left Navigation'}</h3>
           <LeftNavigation
             Menus={this.state.ListItemProperties.Menus}
             ListStyles={this.state.ListItemProperties.ListStyles}
