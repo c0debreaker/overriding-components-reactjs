@@ -4,6 +4,9 @@ Sample program that shows how a sub component's properties can be modified by a 
 - [Navigation Component](https://github.com/c0debreaker/left-navigation-reactjs)
 - [Box Component] (https://github.com/c0debreaker/box-module-reactjs)
 
+### Live Demo
+[Demo](http://c0debreaker.github.io/override-modules-using-reactjs.html)
+
 ### Installation
 ```
 git clone git@github.com:c0debreaker/overriding-components-reactjs.git
